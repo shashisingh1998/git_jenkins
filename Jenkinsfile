@@ -21,7 +21,7 @@ pipeline {
 	            }
                 stage ('Deploy War File') {
                         steps {
-                                sh "cp helloworld.war /root/apache-tomcat-9.0.41/webapps/"
+                                sh "cp SampleWebApp.war /root/apache-tomcat-9.0.41/webapps/"
                         }
                 }
 	}
