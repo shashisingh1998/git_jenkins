@@ -19,7 +19,6 @@ pipeline {
 	                sh 'mvn install'
 	                }
 	            }
-	        }
 		stage ('Creat War File') {
                         steps {
                                 sh 'java -jar target/dependency/webapp-runner.jar target/*.war'
