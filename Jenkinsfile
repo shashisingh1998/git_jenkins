@@ -6,7 +6,7 @@ pipeline {
 	    stages {
 	        stage ('Compile') {
 	            steps {
-	                sh 'mvn install'
+	                sh 'mvn compile'
 	                }
 	            }      
 	        stage ('Package') {
@@ -25,7 +25,7 @@ pipeline {
                                 sh 'java -jar target/dependency/webapp-runner.jar target/*.war'
                         }
                 }
-		 stage ('Deploy War File') {
+		stage ('Deploy check') {
                         steps {
                                 sh "sudo -i"
                         }
