@@ -19,14 +19,9 @@ pipeline {
 	                sh 'mvn install'
 	                }
 	            }
-		stage ('Deploy check') {
-                        steps {
-                                sh "sudo -i"
-                        }
-                }
                 stage ('Deploy War File') {
                         steps {
-                                sh "cp helloworld.war /root/home/apache-tomcat-9.0.41/webapps/"
+                                sh "cp helloworld.war /root/apache-tomcat-9.0.41/webapps/"
                         }
                 }
 	}
